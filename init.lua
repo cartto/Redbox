@@ -1,3 +1,3 @@
 import("vars.lua")
 
-print(lplr)
+print(vars.lplr.Name)
