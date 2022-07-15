@@ -10,4 +10,4 @@ function vars.getPlrs()
     end
 end
 --i hope
-print(vars.lplr.Name)
+return vars
