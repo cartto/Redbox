@@ -1,3 +1,3 @@
-local vars = import("vars.lua")
+import("vars.lua")
 
 print(lplr)
