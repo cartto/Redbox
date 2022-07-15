@@ -1,3 +1,3 @@
 local vars = import("vars.lua")
 
-print(vars.lplr.Name)
+vars.Character.Humanoid.WalkSpeed = 100
