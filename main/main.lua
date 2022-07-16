@@ -6,7 +6,7 @@ local vars = import("imports/vars.lua")
 Cmds = {  }
 
 function RC(msg)
-    local args = msg:split("\32")
+    local args = msg:split("\43")
     local name = table.remove(args, 1)
     local cmd = Cmds[name]
     if cmd then
