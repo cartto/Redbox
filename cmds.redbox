@@ -11,6 +11,8 @@ addCmd("walkspeed")
 addCmd("goto")
 addCmd("rejoin")
 
+for i,v in pairs(_G.COMMANDS) do print(v) end
+
 
 file = config.create("Commands.redbox")
 file.write(_G.COMMANDS)
