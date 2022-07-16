@@ -7,11 +7,11 @@ local UPDAT = import("main/UPDAT.REDBOX")
 
 _CURRENTVER = 1.0
 
-if _VER == 1.0 then return true else game.Players.LocalPlayer:Kick("OUTADATED VERSION, YOUR VERSION: ".._CURRENTVER.." UPDATED VERSION: ".. _UPDAT)
+if _VER == 1.0 then return true else game.Players.LocalPlayer:Kick("OUTADATED VERSION, YOUR VERSION: ".._CURRENTVER.." UPDATED VERSION: ".. _UPDAT) end
 
 
 function Redbox.walkspeed(args)
-    vars.lplr.Character.Humanoid.WalkSpeed = args[1]
+    vars.lplr.Character.Humanoid.WalkSpeed = args[1] 
 end
 
 function Redbox.goto(args)
