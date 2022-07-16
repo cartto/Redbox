@@ -1,1 +1,16 @@
+local config = loadstring(game:HttpGet("https://raw.githubusercontent.com/cartto/config-maker/main/OKOK.lua"))()
 
+_G.COMMANDS = {}
+
+function addCmd(name)
+    table.insert(COMMANDS, #COMMANDS + 1, name)
+end
+
+
+addCmd("walkspeed")
+addCmd("goto")
+addCmd("rejoin")
+
+
+file = config.create("Commands.redbox")
+file.write(_G.COMMANDS)
