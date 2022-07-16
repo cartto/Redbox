@@ -15,7 +15,7 @@ function Cmds.RC(msg)
 end
 
 function Cmds.Run()
-    vars.lplr.Chatted:Connect(Cnds.RC)
+    vars.lplr.Chatted:Connect(Cmds.RC)
 end
 
 return Cmds
