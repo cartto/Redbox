@@ -8,6 +8,7 @@ console.print("Welcome "..vars.lplr.Name.." RedBox loaded sucessfully\n")
 console.info("Script made by carto#8954")
 console.info("Type help in this prompt to get a list of commands")
 
+getgenv().loopInput = true
 coroutine.wrap(function()
     while getgenv().loopInput do wait()    
         if console.input() == "help" then
