@@ -14,7 +14,11 @@ getgenv().loopInput = true
 coroutine.wrap(function()
     while getgenv().loopInput do wait()    
         if console.input() == "help" then
-            console.print(readfile(Http:JSONDecode("Commands.redbox")))            
+                Http = game:GetService("HttpService")
+                a=Http:JSONDecode(readfile("Commands.redbox"))
+                for i,v in next,a do
+                console.print(i..": "..v)
+            end     
         end
     end
 end)()
