@@ -1,9 +1,22 @@
 local console = {   }
 
-console.print = rconsoleprint
-console.info = rconsoleinfo
-console.warn = rconsolewarn
-console.clr = rconsoleclear
-console.input = rconsoleinput
+function console.print(x)
+    rconsoleprint(x)
+end
+
+function console.info(x)
+    rconsoleinfo(x)
+end
+
+function console.warn(x)
+    rconsolewarn(x)
+end
+function console.clr()
+    rconsoleclear()
+end
+
+function console.input()
+    rconsoleinput()
+end
 
 return console
