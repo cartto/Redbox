@@ -2,16 +2,16 @@ local config = loadstring(game:HttpGet("https://raw.githubusercontent.com/cartto
 
 _G.COMMANDS = {}
 
-function addCmd(name)
-    table.insert(COMMANDS, #COMMANDS + 1, name)
+function addCmd(NAME, DESC)
+    _G.COMMANDS[NAME] = DESC
 end
 
 
-addCmd("walkspeed")
-addCmd("goto")
-addCmd("rejoin")
+addCmd("walkspeed", "changed your players speed")
+addCmd("goto", "teleports you to a player")
+addCmd("rejoin", "rejoins the same server")
 
-for i,v in pairs(_G.COMMANDS) do print(v) end
+-- dont work ig for i,v in pairs(_G.COMMANDS) do print(v) end
 
 
 file = config.create("Commands.redbox")
