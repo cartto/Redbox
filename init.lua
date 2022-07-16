@@ -11,8 +11,11 @@ console.info("Type help in this prompt to get a list of commands")
 Http = game:GetService("HttpService")
 
 getgenv().loopInput = true
+
 coroutine.wrap(function()
-    while getgenv().loopInput do wait()    
+    repeat wait() until isfile("Commands.redbox")
+        print("making")
+        while getgenv().loopInput do wait()    
         if console.input() == "help" then
                 Http = game:GetService("HttpService")
                 a=Http:JSONDecode(readfile("Commands.redbox"))
