@@ -1,10 +1,23 @@
 loadstring(game:HttpGet("https://raw.githubusercontent.com/cartto/Redbox/main/import.func", true))()
 
-local redbox = import("main/main.lua")
+local Redbox = import("main/main.lua")
 local vars = import("imports/vars.lua")
 
-function redbox.Tt("a", function(args)
-    print(args[1])
-end)
+function Redbox.walkspeed(args)
+    vars.lplr.Character.Humanoid.WalkSpeed = args[1]
+end
 
-redbox.Run()
+function Redbox.goto(args)
+    for _, plrs in next, vars.plr:GetPlayers() do
+        if string.find(plrs.Name:lower(), args[1]) then
+            print("a")
+            vars.HumanoidRootPart.CFrame = plrs.Character.HumanoidRootPart.CFrame
+        end
+    end
+end
+
+function Redbox.rejoin()
+    game:GetService("TeleportService"):Teleport(game.PlaceId)
+end
+
+Redbox.Run()
