@@ -19,7 +19,7 @@ end
 
 function Cmds.Chat()
     vars.ChatEvent:Connect(function(msg)
-        if Cmds[msg] then
+        if msg == Cmds[msg] then
             Cmds.Run(msg)
         end
     end)
