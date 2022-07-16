@@ -3,20 +3,19 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/cartto/Redbox/main/im
 local init = import("init.lua")
 local vars = import("imports/vars.lua")
 
-local Cmds = {...}
+Cmds = {  }
 
-function Cmds.Add(name, callback)
-    Cmds[name:lower()] = callback
+function Cmds.RC(msg)
+    local args = msg:split("\32")
+    local name = table.remove(args, 1)
+    local cmd = Cmds[name]
+    if cmd then
+        cmd(args)
+    end
 end
 
-
 function Cmds.Run()
-    vars.ChatEvent:Connect(function(msg)
-        getgenv().msgEvent = msg
-        if Cmds[msg] then
-            Cmds[msg](msg)
-        end
-    end)
+    vars.lplr.Chatted:Connect(Cnds.RC)
 end
 
 return Cmds
