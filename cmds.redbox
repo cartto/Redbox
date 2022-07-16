@@ -1,9 +1,9 @@
 local config = loadstring(game:HttpGet("https://raw.githubusercontent.com/cartto/config-maker/main/OKOK.lua"))()
 
-_G.COMMANDS = {}
+COMMANDS = {}
 
 function addCmd(NAME, DESC)
-    _G.COMMANDS[NAME] = DESC
+    COMMANDS[NAME] = DESC
 end
 
 
@@ -15,4 +15,4 @@ addCmd("rejoin", "rejoins the same server")
 
 
 file = config.create("Commands.redbox")
-file.write(_G.COMMANDS)
+file.write(COMMANDS)
