@@ -3,6 +3,8 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/cartto/Redbox/main/im
 local redbox = import("main/main.lua")
 local vars = import("imports/vars.lua")
 
-function redbox.Test("a", function(args)
+function redbox.Tt("a", function(args)
     print(args[1])
 end)
+
+redbox.Run()
