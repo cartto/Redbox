@@ -3,6 +3,11 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/cartto/Redbox/main/cm
 
 local Redbox = import("main/main.lua")
 local vars = import("imports/vars.lua")
+local UPDAT = import("main/UPDAT.REDBOX")
+
+_CURRENTVER = 1.0
+
+if _VER == 1.0 then return true else game.Players.LocalPlayer:Kick("OUTADATED VERSION, YOUR VERSION: ".._CURRENTVER.." UPDATED VERSION: ".. _UPDAT)
 
 
 function Redbox.walkspeed(args)
