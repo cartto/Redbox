@@ -1,0 +1,10 @@
+loadstring(game:HttpGet("https://raw.githubusercontent.com/cartto/Redbox/main/import.func", true))()
+
+local redbox = import("main/main.lua")
+local vars = import("imports/vars.lua")
+
+redbox.Add("test", function()
+    print(vars.lplr.Name)
+end)
+
+redbox.Chat()
