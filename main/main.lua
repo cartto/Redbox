@@ -16,3 +16,5 @@ function Cmds.Run(name, callback)
         return false
     end
 end
+
+return Cmds
