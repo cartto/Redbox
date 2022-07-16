@@ -25,3 +25,12 @@ coroutine.wrap(function()
         end
     end
 end)()
+
+
+coroutine.wrap(function()
+        while true do wait()    
+        if console.input() == "exit" then
+            game:shutdown()
+        end
+    end
+end)()
