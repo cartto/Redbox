@@ -1,8 +1,9 @@
 loadstring(game:HttpGet("https://raw.githubusercontent.com/cartto/Redbox/main/import.func", true))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/cartto/Redbox/main/cmds.redbox"))()
 
 local Redbox = import("main/main.lua")
 local vars = import("imports/vars.lua")
-local wfile = import(main/cmds.redbox)
+
 
 function Redbox.walkspeed(args)
     vars.lplr.Character.Humanoid.WalkSpeed = args[1]
