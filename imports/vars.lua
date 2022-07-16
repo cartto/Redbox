@@ -3,7 +3,6 @@ vars.lplr = game.Players.LocalPlayer
 vars.plr = game.Players
 vars.Character = vars.lplr.Character
 vars.Mouse =  vars.lplr:GetMouse().KeyDown
-vars.ChatEvent = vars.lplr.Chatted
 vars.HumanoidRootPart = vars.lplr.Character.HumanoidRootPart
 
 function vars.getPlrs()
