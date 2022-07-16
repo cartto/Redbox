@@ -6,7 +6,7 @@ local vars = import("imports/vars.lua")
 local Cmds = {...}
 
 function Cmds.Add(name, callback)
-    Cmds[name:lower()] = callback(vars.lplr)
+    Cmds[name:lower()] = callback
 end
 
 function Cmds.Run(name)
@@ -19,7 +19,7 @@ end
 
 function Cmds.Chat()
     vars.ChatEvent:Connect(function(msg)
-        if msg == Cmds[msg] then
+        if Cmds[msg] then
             Cmds.Run(msg)
         end
     end)
