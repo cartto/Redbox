@@ -1,0 +1,3 @@
+function import(path)
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/cartto/Redbox/main/"..path.."/", true))()
+end
