@@ -5,7 +5,7 @@ local vars = import("imports/vars.lua")
 
 Cmds = {  }
 
-function Cmds.RC(msg)
+function RC(msg)
     local args = msg:split("\32")
     local name = table.remove(args, 1)
     local cmd = Cmds[name]
@@ -15,7 +15,7 @@ function Cmds.RC(msg)
 end
 
 function Cmds.Run()
-    vars.lplr.Chatted:Connect(Cmds.RC)
+    vars.lplr.Chatted:Connect(RC)
 end
 
 return Cmds
