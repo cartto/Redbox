@@ -18,3 +18,5 @@ function Cmds.Run()
         end
     end)
 end
+
+return Cmds
