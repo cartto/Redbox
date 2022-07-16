@@ -20,7 +20,7 @@ coroutine.wrap(function()
                 Http = game:GetService("HttpService")
                 a=Http:JSONDecode(readfile("Commands.redbox"))
                 for i,v in next,a do
-                rconsoleprint(i..": "..v)
+                print(i..": "..v)
             end     
         end
     end
